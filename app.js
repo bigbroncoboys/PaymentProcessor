@@ -1,5 +1,3 @@
-var infoArr = [];
-
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -51,11 +49,12 @@ app.post('/', function(req, res) {
 
   const stripe = require("stripe")("sk_test_XfSN5Jg519ofs2eCCZny9bUg000Vt1SumR");
 
+  /*
   var charge = stripe.charges.create(
       {
         amount: 1,
         currency: 'usd',
-        source: 'tok',
+        source: info,
         description: 'Test charge',
       },
       function(err, charge) {
@@ -66,6 +65,8 @@ app.post('/', function(req, res) {
   charge.then(function(x) {
     console.log('processed charge ' + x);
   });
+
+   */
 
   res.send('processed payment request');
 
