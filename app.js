@@ -41,38 +41,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.post('/', function(req, res) {
-  var info = req.body;
-  console.log(info);
-  infoArr.push(info);
-
-
-  const stripe = require("stripe")("sk_test_XfSN5Jg519ofs2eCCZny9bUg000Vt1SumR");
-
-  /*
-  var charge = stripe.charges.create(
-      {
-        amount: 1,
-        currency: 'usd',
-        source: info,
-        description: 'Test charge',
-      },
-      function(err, charge) {
-        // asynchronously called
-      }
-  );
-
-  charge.then(function(x) {
-    console.log('processed charge ' + x);
-  });
-
-   */
-
-  res.send('processed payment request');
-
-});
-
-
-
 module.exports = app;
 
