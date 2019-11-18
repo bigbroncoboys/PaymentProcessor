@@ -7,7 +7,7 @@ var processor = function (req, res, next) {
   var stripe = require('stripe')('sk_test_XfSN5Jg519ofs2eCCZny9bUg000Vt1SumR');
   const info = req.body;
   var token = info.tok;
-  console.log('token ' + info.tok + '\n' + 'amount ' + info.amt);
+  console.log('token ' + info.tok);
 
   var charge = stripe.charges.create(
       {
@@ -36,9 +36,14 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Express' });
 });
 
+
 router.use(processor);
 router.post('/', function(req, res, next) {
 res.send('processed file');
 });
+
+
+
+
 
 module.exports = router;
