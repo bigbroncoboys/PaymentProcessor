@@ -1,4 +1,4 @@
-# Backend_StripePayment_API
+# PaymentProcessor
 
 added http server request functionality between front-end react-native and back-end expressjs
 
