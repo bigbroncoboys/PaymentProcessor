@@ -8,3 +8,5 @@ where the payment is securely processed
 back-end will respond back to the front-end, sending a Promise of the transaction's success or failure
 
 @johnawin
+
+refer to bigbroncoboys/BackendAPI repo for refactored implementation
